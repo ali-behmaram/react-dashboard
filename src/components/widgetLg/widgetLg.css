@@ -1,0 +1,90 @@
+.widgetLg{
+    flex: 2;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+    /* margin-bottom: 20px; */
+}
+
+.widgetLgTitle{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.widgetLgTable{
+    width: 100%;
+    border-spacing: 20px;
+}
+
+.widgetLgTh{
+    text-align: left;
+}
+
+.widgetLgUser{
+    display: flex;
+    align-items: center;
+}
+
+.widgetLgImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.widgetLgDate, .widgetLgAmount{
+    /* font-size: 14px; */
+    font-weight: 300;
+    /* color: #888; */
+}
+
+.widgetLgButton{
+    padding: 5px 7px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* .widgetLgButton:hover{
+    background-color: #00897b
+} */
+
+
+.widgetLgButton.Approved{
+    color: #3bb077;
+    background-color: #e5faf2;
+}
+
+
+.widgetLgButton.Rejected{
+    color: #e53935;
+    background-color: #fde0e0;
+}
+
+
+.widgetLgButton.Pending{
+    color: #f9a825;
+    background-color: #fff3e0;
+}
+
+
+.widgetLgButton.Approved:hover{
+    background-color: #3bb077;
+    color: #e5faf2;
+}
+
+
+.widgetLgButton.Rejected:hover{
+    background-color: #e53935;
+    color: #e5faf2;
+}
+
+
+.widgetLgButton.Pending:hover{
+    background-color: #f9a825;
+    color: #e5faf2;
+}
+
