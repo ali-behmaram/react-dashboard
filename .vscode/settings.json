@@ -1,0 +1,12 @@
+{
+    "workbench.editor.decorations.colors": true,
+    "workbench.preferredHighContrastLightColorTheme": "Default High Contrast Light",
+    "workbench.preferredLightColorTheme": "Default High Contrast Light",
+    "window.autoDetectColorScheme": false,
+    "window.closeWhenEmpty": false,
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#183230",
+        "titleBar.activeBackground": "#224643",
+        "titleBar.activeForeground": "#F8FCFB"
+    }
+}
