@@ -5,7 +5,7 @@ import { productData } from '../../data'
 import "./Products.css"
 import { Link } from 'react-router-dom'
 import { DeleteOutline } from '@mui/icons-material'
-export default function Product() {
+export default function ProductList() {
 
   let [productsData, setProductsData] = useState(productData)
   const productDelete = (productid) => {
@@ -58,7 +58,7 @@ export default function Product() {
             </Link>
             <DeleteOutline
               className='userListDelete'
-              // onClick={() => productDelete(params.row.id)}
+              onClick={() => productDelete(params.row.id)}
             />
             
           </>
@@ -74,7 +74,7 @@ export default function Product() {
   return (
     <div className='userList'>
       <DataGrid
-        rows={productData}
+        rows={productsData}
         columns={columns}
         disableSelectionOnClick
         checkboxSelection

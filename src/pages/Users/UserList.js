@@ -74,7 +74,7 @@ export default function UserList() {
             </Link>
             <DeleteOutline
               className='userListDelete'
-              // onClick={() => handleDelete(params.row.id)}
+              onClick={() => handleDelete(params.row.id)}
             />
             
           </>
@@ -90,7 +90,7 @@ export default function UserList() {
   return (
     <div className='userList'>
       <DataGrid
-        rows={userRows}
+        rows={userDatas}
         columns={columns}
         disableSelectionOnClick
         pageSize={3}

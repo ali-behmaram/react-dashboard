@@ -184,7 +184,7 @@ let productData = [
     
 ]
 
-const productsDtatChart = [
+const productsDataChart = [
     {
         name: "jan",
         sales: 4000,
@@ -207,4 +207,27 @@ const productsDtatChart = [
     },
 ]
 
-export {xAxisData, newMembers, transactions, userRows, productData, productsDtatChart}
+// توابع کمکی برای تولید داده‌های داینامیک
+const generateRandomSales = () => Math.floor(Math.random() * 10000) + 1000;
+const generateRandomDate = () => {
+    const date = new Date();
+    date.setDate(date.getDate() - Math.floor(Math.random() * 30));
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+};
+
+// تابع برای به‌روزرسانی داده‌ها
+export const updateData = () => {
+    return {
+        xAxisData: xAxisData.map(item => ({
+            ...item,
+            Sale: generateRandomSales()
+        })),
+        transactions: transactions.map(item => ({
+            ...item,
+            amount: generateRandomSales(),
+            date: generateRandomDate()
+        }))
+    };
+};
+
+export {xAxisData, newMembers, transactions, userRows, productData, productsDataChart}

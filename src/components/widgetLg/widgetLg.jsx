@@ -13,33 +13,29 @@ export default function WidgetLg() {
         <div className="widgetLg">
             <h3 className="widgetLgTitle">Latest TransAction</h3>
             <table className="widgetLgTable">
-
-                <tr className="widgetLgTr">
-                    <th className="widgetLgTh">Customer</th>
-                    <th className="widgetLgTh">Date</th>
-                    <th className="widgetLgTh">Amout</th>
-                    <th className="widgetLgTh">Status</th>
-                </tr>
-
-                {transactions.map(transaction => (
-                    <tr key={transaction.id} className="widgetLgTr">
-                    <td className="widgetLgUser">
-                        <img src={transaction.img} alt="" className="widgetLgImg" />
-                        <span className="widgetLgName">{transaction.costumer}</span>
-                    </td>
-
-                    <td className="widgetLgDate">{transaction.date}</td>
-
-                    <td className="widgetLgAmount">{transaction.amount}</td>
-
-                    <td className="widgetLgStatus">
-                        <Button type={transaction.status} />
-                    </td>
-                </tr>
-                ))}
-                
-
-
+                <thead>
+                    <tr className="widgetLgTr">
+                        <th className="widgetLgTh">Customer</th>
+                        <th className="widgetLgTh">Date</th>
+                        <th className="widgetLgTh">Amout</th>
+                        <th className="widgetLgTh">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {transactions.map(transaction => (
+                        <tr key={`transaction-${transaction.id}`} className="widgetLgTr">
+                            <td className="widgetLgUser">
+                                <img src={transaction.img} alt="" className="widgetLgImg" />
+                                <span className="widgetLgName">{transaction.costumer}</span>
+                            </td>
+                            <td className="widgetLgDate">{transaction.date}</td>
+                            <td className="widgetLgAmount">{transaction.amount}</td>
+                            <td className="widgetLgStatus">
+                                <Button type={transaction.status} />
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
             </table>
                     
 

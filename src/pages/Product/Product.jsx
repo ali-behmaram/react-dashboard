@@ -2,7 +2,7 @@ import React from "react"
 import "./Product.css"
 import { Link } from "react-router-dom"
 import Chart from "../../components/Chart/Chart"
-import { productsDtatChart } from "../../data"
+import { productsDataChart } from "../../data"
 
 
 export default function Product() {
@@ -17,7 +17,7 @@ export default function Product() {
 
             <div className="productTop">
                 <div className="productTopLeft">
-                    <Chart title="Sale in Month" data={productsDtatChart} dataKey='sales' />
+                    <Chart title="Sale in Month" data={productsDataChart} dataKey='sales' />
                 </div>
 
                 <div className="productTopRight">
@@ -29,13 +29,10 @@ export default function Product() {
                     <div className="productInfoBottom">
                         <div className="productInfoItem">
                             <div className="productInfoKey">ID:</div>
-                            <div className="produc`tInfoValue">123</div>
+                            <div className="productInfoValue">123</div>
                         </div>
-                    </div>
-
-                    <div className="productInfoBottom">
                         <div className="productInfoItem">
-                            <div className="productInfoKey">Nmae:</div>
+                            <div className="productInfoKey">Name:</div>
                             <div className="productInfoValue">Apple AirPods</div>
                         </div>
                     </div>
